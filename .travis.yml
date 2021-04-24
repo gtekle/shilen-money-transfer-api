@@ -11,6 +11,6 @@ deploy:
   api_key: $HEROKU_API_KEY
   app: shilen-money-transfer-api
   on:
-    repo: gtekle / shilen-money-transfer-api
+    repo: gtekle/shilen-money-transfer-api
     branch: main
   skip_cleanup: 'true'
