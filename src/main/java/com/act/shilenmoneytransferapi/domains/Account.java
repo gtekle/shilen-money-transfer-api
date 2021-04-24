@@ -1,8 +1,11 @@
 package com.act.shilenmoneytransferapi.domains;
 
 import lombok.Data;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
+import java.util.List;
 
 /*
  Account class that defines the properties of an account and that will be applied to atable by ORM
@@ -35,5 +38,13 @@ public class Account {
     private Boolean isVerified=true;
 
     private Double balance=0.0;
+
+    @OneToMany(mappedBy = "senderAccount", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private List<Transfer> senderTransferList;
+
+    @OneToMany(mappedBy = "receiverAccount", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private List<Transfer> receiverTransferList;
 
 }
