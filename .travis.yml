@@ -1,0 +1,16 @@
+language: java
+jdk:
+- oraclejdk11
+script:
+- "./mvnw clean verify"
+branches:
+  only:
+  - main
+deploy:
+  provider: heroku
+  api_key: $HEROKU_API_KEY
+  app: money-transfer-api-biniam
+  on:
+    repo: PracticalSoftwareEngineeringWorkshop/money-transfer-api
+    branch: main
+  skip_cleanup: 'true'
