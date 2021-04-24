@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://ec2-34-252-251-16.eu-west-1.compute.amazonaws.com:5432/d2284nfqhp2kpa?ssl=true&sslmode=require
-    username: cjnpnacgasjyxt
-    password: eb546506edab03bca445e61a24d7911239c93ce388aee22a7dd86ecdc54e90f6
+    url: jdbc:postgresql://ec2-54-216-185-51.eu-west-1.compute.amazonaws.com:5432/da980pqrbpdq82?ssl=true&sslmode=require
+    username: afqicpjnrbusvo
+    password: d11f05edaa87d7b971601327c58c1825127b76b24fb81fd62c3bc6f80891bd98
     # In Spring boot 2, database initialization only works for embedded databases (H2, HSQLDB).
     # If you want to use it for other databases, you need to change the
     initialization-mode: always

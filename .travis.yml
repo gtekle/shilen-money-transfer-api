@@ -9,8 +9,8 @@ branches:
 deploy:
   provider: heroku
   api_key: $HEROKU_API_KEY
-  app: money-transfer-api-biniam
+  app: shilen-money-transfer-api
   on:
-    repo: PracticalSoftwareEngineeringWorkshop/money-transfer-api
+    repo: gtekle/shilen-money-transfer-api
     branch: main
   skip_cleanup: 'true'
