@@ -11,7 +11,7 @@ public class TransferService {
     @Autowired
     private TransferRepository transferRepository;
 
-    public Transfer createTransfer(Transfer transfer){
-        return transferRepository.save(transfer);
-    }
+    public Transfer createTransfer(Transfer transfer){ return transferRepository.save(transfer);}
+
+    public Iterable<Transfer> getAllTransfers(){return transferRepository.findAll();}
 }
