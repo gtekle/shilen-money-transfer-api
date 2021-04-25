@@ -13,8 +13,8 @@
 
 {
     "reasonForTransfer": "Payable",
-    "transferAmount": "200.2",
+    "transferAmount": "1000.5",
     "status": "done",
-    "senderAccountId": {"id": "2"},
-    "receiverAccountId": {"id": "1"}
+    "senderAccount":{"id":4},
+    "receiverAccount":{"id":5}
 }
