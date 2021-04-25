@@ -1,5 +1,6 @@
 package com.act.shilenmoneytransferapi.domains;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
@@ -41,10 +42,12 @@ public class Account {
 
     private Double balance=0.0;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "senderAccount", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private List<Transfer> senderTransferList;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "receiverAccount", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private List<Transfer> receiverTransferList;

@@ -18,7 +18,7 @@ public class AccountController {
         return accountService.createAccount(accountRequest);
     }
 
-    @GetMapping("/list")
+    @GetMapping(value = "/list", produces = "application/json")
     public Iterable<Account> getAllAccounts(){
         return accountService.getAllAccounts();
     }

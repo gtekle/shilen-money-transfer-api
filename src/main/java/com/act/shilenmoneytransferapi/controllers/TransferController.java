@@ -21,4 +21,9 @@ public class TransferController {
     public Iterable<Transfer> getAllTransfers(){
         return transferService.getAllTransfers();
     }
+
+    @GetMapping("/show/{id}")
+    public Transfer getTransferById(@PathVariable("id") String id){
+        return transferService.getTransferById(id);
+    }
 }
