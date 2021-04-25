@@ -1,6 +1,6 @@
 # shilen-money-transfer-api
 
-#Sending POST to create Account from Postman
+# Sending POST to create Account from Postman
 {
     "firstName": "Tekle",
     "lastName": "Kidanemariam",
@@ -9,7 +9,7 @@
     "pin":"1134"
 }
 
-#Sending POST to create Transfer from Postman
+# Sending POST to create Transfer from Postman
 
 {
     "reasonForTransfer": "Payable",
